@@ -1,6 +1,3 @@
-//
-// Created by rukosenpa on 05/02/2021.
-//
 #include "../types.h"
 
 #ifndef CODINGINTERVIEWUNIVERSITY_VECTOR_H
@@ -12,7 +9,7 @@ struct Vector {
     Type type;
 };
 
-void * create(int size, Type type);
+void *create(Type type, const int *sizePtr);
 
 void append(void *element);
 
@@ -25,6 +22,5 @@ void *get(int index);
 void remove(int index);
 
 void set(int index, void *value);
-
 
 #endif //CODINGINTERVIEWUNIVERSITY_VECTOR_H
