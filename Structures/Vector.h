@@ -3,24 +3,24 @@
 #ifndef CODINGINTERVIEWUNIVERSITY_VECTOR_H
 #define CODINGINTERVIEWUNIVERSITY_VECTOR_H
 
-struct Vector {
-    int size;
-    void *start;
-    Type type;
-};
+typedef struct {
+    int length;
+    int capacity;
+    void **data;
+} Vector;
 
-void *create(Type type, const int *sizePtr);
+Vector *create(const int *sizePtr);
 
-void append(void *element);
+void append(Vector *vector, void *elementPtr);
 
-void *pop(int index);
+void *pop(Vector *vector);
 
-void insert(void *element);
+void insert(Vector *vector, void *element);
 
-void *get(int index);
+void *get(Vector *vector, int index);
 
-void remove(int index);
+//void remove(int index);
 
-void set(int index, void *value);
+void set(Vector *vector, int index, void *value);
 
 #endif //CODINGINTERVIEWUNIVERSITY_VECTOR_H
